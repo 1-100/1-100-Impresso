@@ -45,13 +45,14 @@
 
     img {
       width: 100%;
+      display: block;
     }
 
     .folha {
       width: 21cm;
       height: 29.7cm;
       background-color: var(--cor-secundaria);
-      padding: 8mm 8mm 8mm 20mm;
+      padding: 8mm 8mm 8mm 30mm;
     }
 
     .conteudo {
@@ -66,7 +67,7 @@
     .secao-infos {
       display: grid;
       grid-template-columns: 3fr 1fr;
-      gap: 10rem;
+      gap: 3cm;
     }
 
     .secao-infos .infos {
@@ -90,22 +91,32 @@
       line-height: 1.5em;
     }
 
-    .secao-infos .contagem {
+    .secao-infos .contagem p{
       background-color: pink;
       font-size: var(--fonte-grande);
       line-height: 0.8em;
       text-align: right;
       letter-spacing: -0.04em;
+      margin-bottom: 1cm;
+    }
+
+    .secao-infos .thumb {
+      border: 1px solid var(--cor-principal);
     }
 
     .secao-imagens {
       display: grid;
       grid-template-columns: repeat(10, 1fr);
-      gap: 1rem;
+      column-gap: 3mm;
     }
 
     .secao-imagens img {
       border: 1px solid var(--cor-principal);
+    }
+
+    .secao-imagens p {
+      font-size: var(--fonte-pqn);
+      margin: 0;
     }
 
     .folha * {
@@ -122,7 +133,7 @@
         background-color: #fff;
       }
     }
-
+    
   </style>
 </head>
 <body>
@@ -142,22 +153,30 @@
           </div>
         </div>
         <div class="contagem">
-          100
+          <p>100</p>
+          <div class="thumb">
+            <img src="https://1-100.github.io/formas/067/thumb.jpg" alt="">
+          </div>
         </div>
       </div>
       <div class="secao-imagens">
-        
       </div>
     </div>
   </div>
   <script>
-    let imagens = document.getElementsByClassName("secao-imagens")[0]
-    let baseurl = "https://1-100.github.io/formas/100/"
+    let imagens = document.getElementsByClassName("secao-imagens")[0];
+    let baseurl = "https://1-100.github.io/formas/067/";
 
     for(let i = 1; i <= 100; i++) {
+      let item = document.createElement("div");
       let img = document.createElement("img");
-      img.setAttribute("src", `${baseurl}/${i}.jpg`)
-      imagens.append(img)
+      let n = document.createElement("p");
+      n.innerText = i;
+
+      img.setAttribute("src", `${baseurl}/${i}.jpg`);
+      item.append(img);
+      item.append(n);
+      imagens.append(item);
     }
   </script>
 </body>
