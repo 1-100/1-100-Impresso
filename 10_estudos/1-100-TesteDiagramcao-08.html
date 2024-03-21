@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4</title>
+    <title>6</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
@@ -26,9 +26,9 @@
         --cor-secundaria: #fff;
         --fonte-principal: "Necto-Mono", sans-serif;
         --fonte-secundaria: "Noto Serif", serif;
-        --fonte-grande: 100pt;
+        --fonte-grande: 70pt;
         --fonte-normal: 10pt;
-        --fonte-pqn: 8pt;
+        --fonte-pqn: 9pt;
       }
 
       * {
@@ -55,13 +55,13 @@
         width: 21cm;
         height: 29.7cm;
         background-color: var(--cor-secundaria);
-        padding: 8mm 8mm 8mm 40mm;
+        padding: 8mm 8mm 8mm 50mm;
       }
 
       .conteudo {
         background-color: aqua;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         justify-content: space-between;
         width: 100%;
         height: 100%;
@@ -69,49 +69,49 @@
 
       .secao-infos {
         display: flex;
-        flex-direction: column;
+        align-items: flex-start;
         justify-content: space-between;
-        padding-left: 11mm;
-        width: 76.5mm;
       }
 
-      .secao-imagens {
-        width: 94.5mm;
-      }
-
-      .secao-infos .infos {
-        background-color: pink;
-        
-      }
-
-      .secao-infos .infos > * {
-        margin-bottom: 3mm;
-      }
-
-      .secao-infos .infos .descricao {
+      .secao-infos .descricao {
         font-family: var(--fonte-secundaria);
         line-height: 1.3em;
+        width: 132mm;
+        padding-right: 10mm;
       }
 
-      .secao-infos .infos .creditos ul {
+      .rodape {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .rodape .creditos ul {
         padding: 0;
         list-style: none;
         text-transform: uppercase;
-        font-size: var(--fonte-pqn);
+        font-size: 8pt;
+        margin: 0;
       }
 
-      .secao-infos .infos .creditos ul li span {
-        border-bottom: 1px solid;
+      .rodape .creditos ul li span {
+        border: 1px solid;
+        border-radius: 1em;
+        padding: 0 0.5em;
         line-height: 1.5em;
       }
 
-      .secao-infos .contagem p {
+      .rodape .contagem p {
         background-color: pink;
-        font-size: 105pt;
-        line-height: 0.8em;
-        text-align: right;
+        height: 35pt;
+        font-size: 40pt;
+        display: block;
+        line-height: 0.78em;
+        text-align: left;
         letter-spacing: -0.04em;
-        margin: 0 0 -0.03em -0.11em;
+        margin: 0;
+        border: 1px solid;
+        border-radius: 1em;
+        padding: 0 0.2em;
       }
 
       .secao-infos .thumb {
@@ -120,8 +120,9 @@
 
       .secao-imagens {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(10, 1fr);
         column-gap: 3mm;
+        row-gap: 1mm;
       }
 
       .secao-imagens img {
@@ -153,39 +154,39 @@
     <div class="folha">
       <div class="conteudo">
         <div class="secao-infos">
-          <div class="infos">
-            <div class="thumb">
-              <img src="https://1-100.github.io/formas/067/thumb.jpg" alt="" />
-            </div>
-            <div class="descricao">
-              <p>
-                Em um primeiro código pega uma imagem aleatoria de cada uma das
-                contagens de 1 a 99 e atribui um valor de brilho para imagem,
-                quanto mais pixels claros mais brilho a imagem tem. Em um
-                segundo utiliza as informações do primeiro para reticular com as
-                imagens da contagem um vídeo de uma pessoa batendo palmas. Esta
-                contagem é também um agradecimento a todos que participaram
-                desse projeto.
-              </p>
-            </div>
-            <div class="creditos">
-              <ul>
-                <li><span>Autoria</span>: Guilherme Vieira</li>
-                <li><span>Link</span>: https://guilhermevieira.info</li>
-                <li><span>Plataforma</span>: Processing, Python</li>
-              </ul>
-            </div>
+          <div class="descricao">
+            <p>
+              Em um primeiro código pega uma imagem aleatoria de cada uma das
+              contagens de 1 a 99 e atribui um valor de brilho para imagem,
+              quanto mais pixels claros mais brilho a imagem tem. Em um
+              segundo utiliza as informações do primeiro para reticular com as
+              imagens da contagem um vídeo de uma pessoa batendo palmas. Esta
+              contagem é também um agradecimento a todos que participaram
+              desse projeto.
+            </p>
+          </div>
+          <div class="thumb">
+            <img src="https://1-100.github.io/formas/100/thumb.jpg" alt="" />
+          </div>
+        </div>
+        <div class="secao-imagens"></div>
+        <div class="rodape">
+          <div class="creditos">
+            <ul>
+              <li><span>Autoria</span> Guilherme Vieira</li>
+              <li><span>Link</span> https://guilhermevieira.info</li>
+              <li><span>Plataforma</span> Processing, Python</li>
+            </ul>
           </div>
           <div class="contagem">
             <p>100</p>
           </div>
         </div>
-        <div class="secao-imagens"></div>
       </div>
     </div>
     <script>
       let imagens = document.getElementsByClassName("secao-imagens")[0];
-      let baseurl = "https://1-100.github.io/formas/067/";
+      let baseurl = "https://1-100.github.io/formas/100/";
 
       for (let i = 1; i <= 100; i++) {
         let item = document.createElement("div");

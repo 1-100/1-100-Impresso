@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5</title>
+  <title>7</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://1-100.github.io/css/normalize.css">
@@ -66,16 +66,18 @@
 
     .secao-infos {
       display: flex;
-      align-items: flex-start;
+      gap: 20mm;
     }
 
     .secao-infos .infos {
       background-color: pink;
-      width: 134mm;
-      padding-right: 5mm;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+
+    .secao-infos .infos {
+      width: 134mm;
     }
 
     .secao-infos .infos .descricao {
@@ -88,6 +90,7 @@
       list-style: none;
       text-transform: uppercase;
       font-size: var(--fonte-pqn);
+      margin: 0;
     }
 
     .secao-infos .infos .creditos ul li span {
@@ -97,13 +100,19 @@
       line-height: 1.5em;
     }
 
+    .secao-infos .contagem {
+      width: 56mm;
+    }
+
     .secao-infos .contagem p {
       background-color: pink;
-      font-size: 40pt;
+      font-size: 100pt;
       line-height: 0.8em;
-      text-align: left;
+      text-align: right;
       letter-spacing: -0.04em;
       margin-bottom: var(--fonte-normal);
+      margin-left: -0.08em;
+      margin-top: -0.06em;
     }
 
     .secao-infos .thumb {
@@ -149,13 +158,8 @@
     <div class="conteudo">
       <div class="secao-infos">
         <div class="infos">
-          <div class="intro">
-            <div class="contagem">
-              <p>100</p>
-            </div>
-            <div class="descricao">
-              <p>Em um primeiro código pega uma imagem aleatoria de cada uma das contagens de 1 a 99 e atribui um valor de brilho para imagem, quanto mais pixels claros mais brilho a imagem tem. Em um segundo utiliza as informações do primeiro para reticular com as imagens da contagem um vídeo de uma pessoa batendo palmas. Esta contagem é também um agradecimento a todos que participaram desse projeto.</p>
-            </div>
+          <div class="descricao">
+            <p>Em um primeiro código pega uma imagem aleatoria de cada uma das contagens de 1 a 99 e atribui um valor de brilho para imagem, quanto mais pixels claros mais brilho a imagem tem. Em um segundo utiliza as informações do primeiro para reticular com as imagens da contagem um vídeo de uma pessoa batendo palmas. Esta contagem é também um agradecimento a todos que participaram desse projeto.</p>
           </div>
           <div class="creditos">
             <ul>
@@ -165,8 +169,11 @@
             </ul>
           </div>
         </div>
-        <div class="thumb">
-          <img src="https://1-100.github.io/formas/100/thumb.jpg" alt="">
+        <div class="contagem">
+          <p>100</p>
+          <div class="thumb">
+            <img src="https://1-100.github.io/formas/100/thumb.jpg" alt="">
+          </div>
         </div>
       </div>
       <div class="secao-imagens">
@@ -176,7 +183,7 @@
   </div>
   <script>
     let imagens = document.getElementsByClassName("secao-imagens")[0];
-    let baseurl = "https://1-100.github.io/formas/100/";
+    let baseurl = "https://1-100.github.io/formas/034/";
 
     for(let i = 1; i <= 100; i++) {
       let item = document.createElement("div");
