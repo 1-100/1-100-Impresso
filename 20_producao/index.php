@@ -37,6 +37,7 @@ ob_start();
   //   include 'partials/folha.php';
   // }
 
+  $range = "076a100";
   for ($n = 75; $n < 100; $n++) {
     $forma = $dados[$n]["numero"];
     $descricao = $dados[$n]["descricao"];
@@ -65,4 +66,4 @@ ob_start();
   ob_end_clean();
   echo $out;
 
-  file_put_contents('index.html',$out);
+  file_put_contents('index' . $range . '.html',$out);
