@@ -12,14 +12,14 @@
           </div>
           <div class="creditos">
             <ul>
-              <li><span>Autoria</span> <?php echo $autorias ?></li>
-              <li><span>Link</span> <?php echo $links ?></li>
-              <li><span>Plataforma</span> <?php echo $plataformas ?></li>
+              <li><span>Autoria</span>: <?php echo $autorias ?></li>
+              <li><span>Link</span>: <?php echo $links ?></li>
+              <li><span>Plataforma</span>: <?php echo $plataformas ?></li>
             </ul>
           </div>
         </div>
         <div class="thumb">
-          <img src=<?php echo sprintf('"https://1-100.github.io/formas/%s/thumb.jpg"', $forma) ?>>
+          <img src=<?php echo sprintf('"images/%s/thumb.jpg"', $forma) ?>>
         </div>
       </div>
       <div class="secao-imagens">
@@ -27,7 +27,7 @@
           
           for ($i = 1; $i <= 100; $i++) {
             $html = '<div class="item">';
-            $html .= sprintf('<img src="https://1-100.github.io/formas/%s/%s.jpg">', $forma, $i);
+            $html .= sprintf('<img src="images/%s/%s.jpg">', $forma, $i);
             $html .= sprintf('<p>%s</p>', $i);
             $html .= '</div>';
             echo $html;

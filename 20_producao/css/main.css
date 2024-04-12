@@ -6,13 +6,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('../fonts/NotoSerif.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Variavéis */
 
 :root {
   --cor-principal: #000;
   --cor-secundaria: #fff;
   --fonte-principal: 'Necto-Mono', sans-serif;
-  --fonte-secundaria: 'Noto Serif', serif;
+  --fonte-secundaria: 'Noto Serif', sans-serif;
   --fonte-grande: 70pt;
   --fonte-normal: 9pt;
   --fonte-pqn: 8pt;
@@ -84,10 +91,11 @@ img {
 }
 
 .secao-infos .infos .creditos ul li span {
-  border: 1pt solid;
+  /* border: 1pt solid;
   border-radius: 1em;
   padding: 0 0.5em;
-  line-height: 1.5em;
+  line-height: 1.5em; */
+  text-decoration: underline;
 }
 
 .secao-infos .contagem p {
@@ -97,10 +105,11 @@ img {
   text-align: left;
   letter-spacing: -0.04em;
   margin-bottom: 5mm;
+  margin-left: -1.8mm;
 }
 
 .secao-infos .thumb {
-  border: 1pt solid var(--cor-principal);
+  border: 0.5pt solid var(--cor-principal);
 }
 
 .secao-imagens {
@@ -111,7 +120,7 @@ img {
 }
 
 .secao-imagens img {
-  border: 1pt solid var(--cor-principal);
+  border: 0.5pt solid var(--cor-principal);
 }
 
 .secao-imagens p {
