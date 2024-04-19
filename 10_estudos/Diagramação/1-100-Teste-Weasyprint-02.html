@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: 'Necto-Mono';
+      src: url('../fonts/Necto-Mono.woff2') format('woff2'),
+          url('../fonts/Necto-Mono.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Noto Serif';
+      src: url('../fonts/NotoSerif.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Variavéis */
+
+    :root {
+      --cor-principal: #000;
+      --cor-secundaria: #fff;
+      --fonte-principal: 'Necto-Mono', sans-serif;
+      --fonte-secundaria: 'Noto Serif', sans-serif;
+      --fonte-grande: 70pt;
+      --fonte-normal: 9pt;
+      --fonte-pqn: 8pt;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: lightgray;
+      padding: 2rem;
+      font-family: var(--fonte-principal);
+      font-size: var(--fonte-normal);
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .folha {
+      width: 21cm;
+      height: 29.7cm;
+      background-color: var(--cor-secundaria);
+      padding: 15mm 15mm 15mm 40mm;
+      margin-bottom: 10mm;
+    }
+
+    .conteudo {
+      background-color: aqua;
+      /* display: flex;
+      flex-direction: column;
+      justify-content: space-between; */
+      width: 100%;
+      height: 100%;
+    }
+
+    .secao-infos {
+      display: flex;
+    }
+
+    
+
+    /* .secao-imagens {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      column-gap: 3mm;
+      row-gap: 1mm;
+    }
+
+    .secao-imagens img {
+      border: 0.5pt solid var(--cor-principal);
+    }
+
+    .secao-imagens p {
+      font-size: var(--fonte-pqn);
+      margin: 0;
+    } */
+
+    .folha * {
+      background-color: var(--cor-secundaria) !important;
+    }
+
+    
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      body {
+        padding: 0;
+        background-color: #fff;
+      }
+      .folha {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="folha">
+    <div class="conteudo">
+      <div class="secao-infos">
+        <div class="infos">
+          <div class="intro">
+            <div class="contagem">
+              <p>001</p>
+            </div>
+            <div class="descricao">
+              <p>Divide a tela em 7 retângulos e os preenche de acordo com o valor em binário da contagem, 0 é prenchido de preto e 1 de branco.</p>
+            </div>
+          </div>
+          <div class="creditos">
+            <ul>
+              <li><span>Autoria</span>: Guilherme Vieira</li>
+              <li><span>Link</span>: guilhermevieira.info</li>
+              <li><span>Plataforma</span>: Processing</li>
+            </ul>
+          </div>
+        </div>
+        <div class="thumb">
+          <img src="imagem/forma.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="secao-imagens">
+        
+     
+  </div>
+</body>
+</html>
