@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet"> 
+  <style>
+    @font-face {
+      font-family: 'Necto-Mono';
+      src: url('fonts/Necto-Mono.woff2') format('woff2'),
+          url('fonts/Necto-Mono.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Variavéis */
+
+    :root {
+      --cor-principal: #000;
+      --cor-secundaria: #fff;
+      --fonte-principal: 'Necto-Mono', sans-serif;
+      --fonte-secundaria: 'Noto Serif', serif;
+      --fonte-grande: 40pt;
+      --fonte-media: 20pt;
+      --fonte-normal: 9pt;
+      --fonte-pqn: 8pt;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+
+    body {
+      background-color: lightgray;
+      padding: 2rem;
+      font-family: var(--fonte-principal);
+      font-size: var(--fonte-normal);
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: var(--fonte-pqn);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .folha {
+      width: 42cm;
+      height: 29.7cm;
+      background-color: var(--cor-secundaria);
+      padding: 15mm 15mm 15mm 40mm;
+    }
+
+    .conteudo {
+      background-color: aqua;
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .coluna-interna {
+      background-color: lightcoral;
+      width: 21cm;
+      height: 100%;
+      padding-right: 80mm;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .site {
+      position: absolute;
+      right: 15mm;
+      bottom: 0;
+      width: 4cm;
+      background-color: lightgrey;
+    }
+
+    .coluna-externa {
+      background-color: lightgreen;
+      width: 15.5cm;
+      height: 100%;
+      padding-left: 15mm;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    
+    h1, h2 {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: var(--fonte-grande);
+      margin-top: 0;
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: var(--fonte-normal);
+    }
+
+    .folha * {
+      background-color: var(--cor-secundaria) !important;
+    }
+
+    .folha {
+      /* transform: scale(0.5); */
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+
+    @media print {
+      @page {
+        size: A3;
+        margin: 0;
+      }
+      body {
+        padding: 0;
+        background-color: #fff;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="folha">
+    <div class="conteudo">
+      <div class="coluna-interna">
+        <h1>De quantas formas é possível contar de 1 a 100 utilizando programação?</h1>
+        <div>
+          <p>Muita vezes ao pensar em programação, imaginamos projetos que tem uma grande complexidade ou que terão uma utilidade muito pragmática. Mas programar também pode ser uma maneira de expressar pequenas ideias, experimentar e se divertir.</p>
+          <p>O principal objetivo desse projeto é promover através de um exercício simples que as pessoas experimentem, pratiquem e explorem as possibilidades de programar sem grandes compromissos.</p>
+          <p>Esta publicação compila resultados da proposta aberta realizada em 22 de dezembro de 2020 para artistas, programadores, designers e quem tivesse interesse para executar o seguinte exercício:</p>
+          <p>Utilizando programação elaborar uma forma de visualizar uma contagem de 1 a 100.</p>       
+          <p>Este projeto colaborativo foi uma iniciativa pessoal de Guilherme Vieira, contou com opiniões e contribuições de amigos e da comunidade Mastodon(te) e é uma expansão do projeto 10 formas de contar de 1 – 10.</p>
+        </div>
+        <div class="site">
+          <p>Todas formas, códigos, arquivos deste projetos estão disponíveis no site: 1-100.github.io/</p>
+          <img src="imagem/qrcode-site.svg">
+        </div>
+      </div>
+      <div class="coluna-externa">
+        <h1>100 formas de contar de 1 a 100 utilizando programação</h1>
+        <p><span>Participantes</span>: Advan Shumiski, Alexandre B A Villares, André Burnier, Caluã de Lacerda Pataca, César Ganimi Machado, Eduardo Zmievski (a.k.a. CurlyBoy), Felipe Turcheti, Fátima Finizola, Gabriela Momberg, Guilherme Vieira, Henrique Eira, John Cartan, João Generoso, Jéssica Breda, Júnior Morimoto, Lucas Gabriel Lima, Luiz Jales, Mandu, Mariana Leal, Marina Cardoso, Marlon Tenório, Mateus Berruezo, Monica Rizzolli, Rodrigo Junqueira, Thiago Correia, Tiago Fernandes Tavares, Vamoss, Vinícius Ladivez, Vitor Carvalho, Wandeson Ricardo (WSRicardo)</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
