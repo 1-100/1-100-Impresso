@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://1-100.github.io/css/normalize.css">
+  <style>
+    @font-face {
+      font-family: 'Necto-Mono';
+      src: url('fonts/Necto-Mono.woff2') format('woff2'),
+          url('fonts/Necto-Mono.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+/* Variavéis */
+
+:root {
+  --cor-principal: #000;
+  --cor-secundaria: #fff;
+  --fonte-principal: 'Necto-Mono', sans-serif;
+  --fonte-secundaria: 'Noto Serif', serif;
+  --fonte-grande: 70pt;
+  --fonte-normal: 9pt;
+  --fonte-pqn: 8pt;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  padding: 2rem;
+  font-family: var(--fonte-principal);
+  font-size: var(--fonte-normal);
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.folha {
+  width: 21cm;
+  height: 29.7cm;
+  background-color: var(--cor-secundaria);
+  padding: 15mm 15mm 15mm 40mm;
+  margin-bottom: 10mm;
+}
+
+.conteudo {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.secao-infos {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.secao-infos .infos {
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.secao-infos .infos .descricao {
+  font-family: var(--fonte-secundaria);
+  line-height: 1.3em;
+  width: 105mm;
+}
+
+.secao-infos .creditos {
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: var(--fonte-pqn);
+  margin: 0;
+  font-family: var(--fonte-principal);
+}
+
+.secao-infos .creditos li span {
+  text-decoration: underline;
+  line-height: 1.5em;
+}
+
+.secao-infos .contagem p {
+  background-color: pink;
+  font-size: 60pt;
+  line-height: 0.8em;
+  text-align: left;
+  letter-spacing: -0.04em;
+  margin-bottom: 5mm;
+}
+
+.secao-infos .thumb {
+  border: 1pt solid var(--cor-principal);
+}
+
+.secao-imagens {
+  display: flex;
+  justify-content: end;
+}
+
+.thumb {
+  width: 50mm;
+  padding-right: 5mm;
+}
+
+.thumb img {
+  border: 1px solid;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 3mm;
+  row-gap: 1mm;
+  width: 105mm;
+}
+
+.galeria img {
+  border: 1pt solid var(--cor-principal);
+}
+
+.galeria p {
+  font-size: var(--fonte-pqn);
+  margin: 0;
+}
+
+.folha * {
+  background-color: var(--cor-secundaria) !important;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  body {
+    padding: 0;
+    background-color: #fff;
+  }
+  .folha {
+    margin: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="folha">
+    <div class="conteudo">
+      <div class="secao-infos">
+        <div class="infos">
+            <div class="contagem">
+              <p>100</p>
+            </div>
+            <div class="descricao">
+              <p>Em um primeiro código pega uma imagem aleatoria de cada uma das contagens de 1 a 99 e atribui um valor de brilho para imagem, quanto mais pixels claros mais brilho a imagem tem. Em um segundo utiliza as informações do primeiro para reticular com as imagens da contagem um vídeo de uma pessoa batendo palmas. Esta contagem é também um agradecimento a todos que participaram desse projeto.</p>
+              <ul class="creditos">
+                <li><span>Autoria</span>: Guilherme Vieira</li>
+                <li><span>Link</span>: guilhermevieira.info</li>
+                <li><span>Plataforma</span>: Processing, Python</li>
+              </ul>
+            </div>
+        </div>
+        
+      </div>
+      <div class="secao-imagens">
+        <div class="thumb">
+          <img src="https://1-100.github.io/formas/100/thumb.jpg" alt="">
+        </div>
+        <div class="galeria">
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="folha verso">
+    <div class="conteudo">
+      <div class="secao-imagens">
+        <div class="galeria">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let imagens = document.getElementsByClassName("galeria")[0];
+    let imagens_verso = document.getElementsByClassName("galeria")[1];
+    let baseurl = "https://1-100.github.io/formas/100/";
+
+    for(let i = 1; i <= 40; i++) {
+      let item = document.createElement("div");
+      let img = document.createElement("img");
+      let n = document.createElement("p");
+      n.innerText = i;
+
+      img.setAttribute("src", `${baseurl}/${i}.jpg`);
+      item.append(img);
+      item.append(n);
+      imagens.append(item);
+    }
+
+    for(let i = 41; i <= 100; i++) {
+      let item = document.createElement("div");
+      let img = document.createElement("img");
+      let n = document.createElement("p");
+      n.innerText = i;
+
+      img.setAttribute("src", `${baseurl}/${i}.jpg`);
+      item.append(img);
+      item.append(n);
+      imagens_verso.append(item);
+    }
+  </script>
+</body>
+</html>
