@@ -1,0 +1,114 @@
+/* Leiaute Dupla
+=============================================== */
+
+.folha.l-dupla {
+  padding: 15mm 15mm 15mm 40mm;
+
+  .conteudo {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .secao-infos {
+    display: flex;
+    justify-content: space-between;
+
+    .infos {
+      background-color: pink;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .descricao {
+        font-family: var(--fonte-secundaria);
+        line-height: 1.3em;
+        width: 105mm;
+      }
+
+      .creditos {
+        padding: 0;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: var(--fonte-pqn);
+        margin: 0;
+        font-family: var(--fonte-principal);
+      }
+
+      .creditos li span {
+        text-decoration: underline;
+        line-height: 1.5em;
+      }
+
+      .contagem p {
+        background-color: pink;
+        font-size: 60pt;
+        line-height: 0.8em;
+        text-align: left;
+        letter-spacing: -0.04em;
+        margin-bottom: 5mm;
+      }
+
+      .thumb {
+        border: 1pt solid var(--cor-principal);
+      }
+    }
+  }
+
+  .secao-imagens {
+    display: flex;
+    justify-content: end;
+
+    img {
+      border: 1pt solid var(--cor-principal);
+      opacity: 0;
+    }
+
+    .img-wrapper {
+      background-size: cover;
+      border: 1pt solid var(--cor-principal);
+    }
+
+    .thumb {
+      width: 50mm;
+      padding-right: 5mm;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 3mm;
+      row-gap: 1mm;
+      width: 105mm;
+
+      p {
+        font-size: var(--fonte-pqn);
+        margin: 0;
+      }
+
+      
+    }
+  }
+}
+
+.folha.l-dupla.verso {
+  padding: 15mm 40mm 15mm 15mm;
+
+  .conteudo {
+    justify-content: end;
+  }
+
+  .secao-imagens {
+    justify-content: flex-start;
+  }
+}
+
+@media screen {
+  .forma-folhas .folha {
+    display: flex;
+    margin-right: 1rem;
+  }
+}

@@ -1,4 +1,4 @@
-<div class="folha">
+<div class="folha l-simples">
     <div class="conteudo">
       <div class="secao-infos">
         <div class="infos">

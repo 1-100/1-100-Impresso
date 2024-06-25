@@ -40,6 +40,19 @@ function gerar_paginas($dados, $modo, $opcoes) {
     }
   }
 
+  if ($modo == "intervalo-dupla") {
+    $inicio = $opcoes[0] - 1;
+    $fim = $opcoes[1];
+    for ($n = $inicio; $n < $fim; $n++) {
+      $forma = $dados[$n]["numero"];
+      $descricao = $dados[$n]["descricao"];
+      $autorias = $dados[$n]["autorias"];
+      $links = $dados[$n]["links"];
+      $plataformas = $dados[$n]["plataformas"];
+      include 'partials/folha-2.php';   
+    }
+  }
+
   if ($modo == "sequencia") {
     $inicio = $opcoes[0] - 1;
     $passo = $opcoes[1];

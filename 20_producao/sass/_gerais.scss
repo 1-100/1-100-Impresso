@@ -1,0 +1,44 @@
+/* Gerais
+=============================================== */
+
+body {
+  background-color: lightgray;
+  padding: 2rem;
+  font-family: var(--fonte-principal);
+  font-size: var(--fonte-normal);
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.folha {
+  width: 21cm;
+  height: 29.7cm;
+  background-color: var(--cor-secundaria);
+  padding: 15mm 15mm 15mm 40mm;
+  margin-bottom: 10mm;
+}
+
+.folha * {
+  background-color: var(--cor-secundaria) !important;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  body {
+    padding: 0;
+    background-color: #fff;
+  }
+  .folha {
+    margin: 0;
+  }
+}
