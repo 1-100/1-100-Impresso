@@ -67,5 +67,19 @@ function gerar_paginas($dados, $modo, $opcoes) {
     }
   }
 
+  if ($modo == "sequencia-dupla") {
+    $inicio = $opcoes[0] - 1;
+    $passo = $opcoes[1];
+    $fim = $opcoes[2];
+    for ($n = $inicio; $n < $fim; $n += $passo) {
+      $forma = $dados[$n]["numero"];
+      $descricao = $dados[$n]["descricao"];
+      $autorias = $dados[$n]["autorias"];
+      $links = $dados[$n]["links"];
+      $plataformas = $dados[$n]["plataformas"];
+      include 'partials/folha-2.php';   
+    }
+  }
+
   // return echo "Modo invalido"
 }
