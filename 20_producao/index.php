@@ -15,10 +15,10 @@ ob_start();
 <body>
   <?php
   
-  $nome_arquivo = "dupla-02";
+  $nome_arquivo = "dupla-revisão-imagem";
   // gerar_paginas($dados, "sequencia", array(5, 5, 100));
   // gerar_paginas($dados, "intervalo", array(1,1));
-  gerar_paginas($dados, "intervalo-dupla", array(1,100));
+  gerar_paginas($dados, "intervalo-dupla", array(56,56));
 
   ?>
  
