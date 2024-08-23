@@ -16,13 +16,13 @@ ob_start();
   <?php
   
   // $nome_arquivo = "dupla-revisão-imagem";
-  // $nome_arquivo = "dupla-03";
-  $nome_arquivo = "dupla-sequencia-03-E";
+  $nome_arquivo = "dupla-04";
+  // $nome_arquivo = "dupla-sequencia-03-E";
 
   // gerar_paginas($dados, "sequencia", array(5, 5, 100));
   // gerar_paginas($dados, "intervalo", array(1,1));
-  // gerar_paginas($dados, "intervalo-dupla", array(1, 100));
-  gerar_paginas($dados, "sequencia-dupla", array(5, 5, 100));
+  gerar_paginas($dados, "intervalo-dupla", array(1, 1));
+  // gerar_paginas($dados, "sequencia-dupla", array(5, 5, 100));
 
   ?>
  

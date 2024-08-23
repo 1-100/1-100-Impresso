@@ -1,0 +1,116 @@
+@use 'base';
+@use 'gerais';
+
+
+:root {
+  --fonte-grande: 35pt;
+  --fonte-media: 20pt;
+  --fonte-normal: 9pt;
+  --fonte-pqn: 8pt;
+}
+
+.folha-capa {
+  width: 42cm;
+  height: 29.7cm;
+  background-color: var(--cor-secundaria);
+  
+
+
+.conteudo {
+  background-color: aqua;
+  padding: 0 0 0 40mm;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.coluna-a {
+  background-color: lightblue;
+  width: 13cm;
+  height: 100%;
+  padding: 15mm 15mm 15mm 20mm;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-right: 1px dashed;
+}
+
+.coluna-b, .coluna-c {
+  background-color: lightgreen;
+  width: 12.5cm;
+  height: 100%;
+  padding: 15mm;
+}
+
+.coluna-b  {
+  display: flex;
+  align-items: end;
+}
+
+.coluna-c {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-left: 1px dashed;
+}
+
+.site {
+  right: -5.5cm;
+  bottom: 0;
+  width: 4cm;
+  background-color: lightgrey;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: var(--fonte-grande);
+  margin-top: 0;
+  text-decoration: underline;
+  margin-top: -0.3em;
+}
+
+h2 {
+  font-size: var(--fonte-normal);
+}
+
+span {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+}
+
+.folha-capa * {
+  background-color: var(--cor-secundaria) !important;
+}
+
+.folha-capa {
+  transform-origin: top left;
+  transform: scale(0.7);
+}
+
+
+
+@media print {
+  @page {
+    size: A3 landscape;
+    margin: 0;
+  }
+  body {
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .folha-capa {
+  
+  transform: scale(1);
+
+  .coluna-c, .coluna-a {
+    border: none;
+  }
+  }
+
+}

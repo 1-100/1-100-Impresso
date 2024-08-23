@@ -39,7 +39,8 @@
       }
 
       .creditos li span {
-        text-decoration: underline;
+        // text-decoration: underline;
+        border-bottom: 1pt solid var(--cor-principal);
         line-height: 1.5em;
       }
 

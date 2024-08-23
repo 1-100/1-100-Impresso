@@ -174,7 +174,7 @@ img {
   font-family: var(--fonte-principal);
 }
 .folha.l-dupla .secao-infos .infos .creditos li span {
-  text-decoration: underline;
+  border-bottom: 1pt solid var(--cor-principal);
   line-height: 1.5em;
 }
 .folha.l-dupla .secao-infos .infos .contagem p {
