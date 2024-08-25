@@ -41,8 +41,16 @@ function gerar_paginas($dados, $modo, $opcoes) {
   }
 
   if ($modo == "intervalo-dupla") {
-    $inicio = $opcoes[0] - 1;
-    $fim = $opcoes[1];
+    $inicio;
+    $fim;
+    if( sizeof($opcoes) > 1) {
+      $inicio = $opcoes[0] - 1;
+      $fim = $opcoes[1];
+    } else {
+      $inicio = $opcoes[0] - 1;
+      $fim = $opcoes[0];
+    }
+    
     for ($n = $inicio; $n < $fim; $n++) {
       $forma = $dados[$n]["numero"];
       $descricao = $dados[$n]["descricao"];
