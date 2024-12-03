@@ -11,4 +11,4 @@ O projeto está organizado em algumas pastas:
 
 ### Ferramentas utilizadas
 
-Listar tudo que foi utilizado para fazer a publicação
+Toda publicação foi produzida usando PHP, HTML e CSS. Os arquivos em PDF foram gerados com a versão de linha de comando do [paged.js](https://pagedjs.org/).
