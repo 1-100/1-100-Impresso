@@ -7,7 +7,14 @@ Repositório destinado aos estudos, protótipos e arquivos finais da publicaçã
 O projeto está organizado em algumas pastas:
 - 10_estudos: arquivos soltos e descompromissados para entender como será a diagramação e sistema de produção da publicação
 - 20_produção: arquivos utilizados para gerar a publicação que será produzida
-- 30_finalizados: arquivos finais prontos para impressão
+
+### PDFs para impressão
+
+Os arquivos em PDF estão disponibilizados nos links abaixo devido ao limite de tamanho dos arquivos nos servidores do GitHub.
+
+- [Capa](https://etc.guilhermevieira.info/1-100/1a100-Capapdf)
+- [Capa Simplificada](https://etc.guilhermevieira.info/1-100/1a100-Capa-Simples.pdf)
+- [Miolo](https://etc.guilhermevieira.info/1-100/1a100-Miolo.pdf)
 
 ### Ferramentas utilizadas
 
